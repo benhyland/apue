@@ -18,11 +18,12 @@ syserr(const char* format, ...) {
 
 void
 usage(const char* format, ...) {
-	errno = 0;
 	char msg[MAX_MSG_LENGTH];
-	snprintf(msg, MAX_MSG_LENGTH, "usage: %s", format);
-
 	va_list	args;
+	
+	snprintf(msg, MAX_MSG_LENGTH, "usage: %s", format);
+	errno = 0;
+	
 	va_start(args, format);
 	verror(msg, args);
 	va_end(args);
