@@ -19,6 +19,8 @@ main(void) {
 	char	line[BUFFER_SIZE];
 	pid_t	pid;
 
+	
+	printf("welcome to shell %ld\n", (long)getpid());
 	prompt();
 
 	while(readLine(line)) {
