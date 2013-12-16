@@ -4,6 +4,10 @@
 #include <fcntl.h>
 #include "exits.h"
 
+/*
+see also od, ls, dd.
+not all filesystems choose not to allocate blocks for holes, so we don't always see a difference
+*/
 
 int
 main(int argc, char* argv[]) {
